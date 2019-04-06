@@ -43,14 +43,15 @@ def draw_cube():
     ax.add_collection3d(Poly3DCollection(verts,
      facecolors='none', linewidths=1, edgecolors='r', alpha=.25))
 
-    count = 0
+    count = 1
     for (a, b, c) in Z:
         ax.text(a,b,c,chr(ord('a')+count))
+        #ax.text(a,b,c,count)
         count+=1
     #uncomment the draw methods to see the lines
     draw_syms_edge(ax)
-    #draw_syms_verts(ax)
-    #draw_syms_face_pairs(ax)
+    draw_syms_verts(ax)
+    draw_syms_face_pairs(ax)
 
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
